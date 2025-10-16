@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice Dashboard</title>
+  <link rel="stylesheet" href="invoices.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Dark mode toggle -->
+  <input type="checkbox" id="dark-toggle" hidden />
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-icon">E</div>
+        <span>Ecomic</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Order</a>
+        <a href="#">Products</a>
+        <a href="#">Analytics</a>
+        <a href="#">Customers</a>
+        <a href="#">Finances</a>
+        <a href="#">Invoices</a>
+        <a href="#">Discounts</a>
+      </nav>
+
+      <div class="apps">
+        <h4>Apps</h4>
+        <a href="#">Chats</a>
+        <a href="#">Email</a>
+        <a href="#">Add Apps</a>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="#">Settings</a>
+        <a href="#">Help Center</a>
+
+        <label for="dark-toggle" class="dark-mode-label">
+          🌙 <span>Dark Mode</span>
+        </label>
+
+        <div class="profile">
+          <div class="avatar"></div>
+          <div>
+            <p class="name">Thomas Fletcher</p>
+            <p class="email">yourmail@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <div class="header-left">
+          <h2>Hi, Thomas 👋</h2>
+          <p>Welcome back to Ecomic</p>
+        </div>
+        <div class="header-right">
+          <input type="text" placeholder="Search..." class="search-box">
+          <button class="export-btn">Export</button>
+          <button class="create-btn"> + Create Order</button>
+        </div>
+      </header>
+
+      <!-- Invoice Summary -->
+      <section class="summary">
+        <div class="summary-card total">
+          <h3>Total Receivables</h3>
+          <p>Overdue</p>
+          <h1>$43,078</h1>
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+          <span>90%</span>
+        </div>
+
+        <div class="summary-card paid">
+          <h4>Paid</h4>
+          <h2>$7,825</h2>
+          <div class="graph purple"></div>
+        </div>
+
+        <div class="summary-card unpaid">
+          <h4>Unpaid</h4>
+          <h2>$1,880</h2>
+          <div class="graph blue"></div>
+        </div>
+
+        <div class="summary-card overdue">
+          <h4>Overdue</h4>
+          <h2>$7,825</h2>
+          <div class="graph red"></div>
+        </div>
+      </section>
+
+      <!-- Invoice Table -->
+      <section class="table-section">
+        <div class="table-header">
+          <h3>Invoice List</h3>
+          <div class="table-actions">
+            <button>Add Invoice</button>
+            <button>Download</button>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th><input type="checkbox" /></th>
+              <th>Invoice ID</th>
+              <th>User Info</th>
+              <th>Create Date</th>
+              <th>Due Date</th>
+              <th>Quantity</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>#3210</td>
+              <td>Cartie Gemson</td>
+              <td>17/01/2025</td>
+              <td>18/01/2025</td>
+              <td>12</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>👁️</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>#4213</td>
+              <td>Mike Hussey</td>
+              <td>16/01/2025</td>
+              <td>17/01/2025</td>
+              <td>32</td>
+              <td><span class="status completed">Completed</span></td>
+              <td>👁️</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>#1230</td>
+              <td>David Lee</td>
+              <td>15/01/2025</td>
+              <td>14/01/2025</td>
+              <td>42</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>👁️</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <button class="Prenext">Previous</button>
+          <div class="pages">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
+          <button class="Prenext">Next</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
