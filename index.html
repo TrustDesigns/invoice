@@ -57,6 +57,7 @@
     <!-- Main Content -->
     <main class="main-content">
       <header class="header">
+        <button class="menu-btn" id="menu-btn">☰</button>
         <div class="header-left">
           <h2>Hi, Thomas 👋</h2>
           <p>Welcome back to Ecomic</p>
@@ -70,7 +71,7 @@
 
       <!-- Invoice Summary -->
       <section class="summary">
-        <div class="summary-card total">
+        <div class="summary-card total" style="grid-column: span 2;">
           <h3>Total Receivables</h3>
           <p>Overdue</p>
           <h1>$43,078</h1>
@@ -167,5 +168,13 @@
       </section>
     </main>
   </div>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.querySelector('.sidebar');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
